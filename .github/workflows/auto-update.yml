@@ -1,0 +1,17 @@
+name: Auto Update Prototype Kit
+on:
+  schedule:
+cron: '0 0 * * *' # Set the schedule to run daily at midnight UTC
+jobs:
+  update-prototype-kit:
+    runs-on: ubuntu-latest
+    steps:
+name: checkout code
+        uses: actions/checkout@v2
+
+name: Update Prototype Kit
+        run: |
+          git remote add upstream https://github.com/alphagov/govuk-prototype-kit.git
+git fetch upstream
+          git merge upstream/main --no-edit
+          git push
