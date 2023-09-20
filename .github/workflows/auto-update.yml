@@ -6,10 +6,10 @@ jobs:
   update-prototype-kit:
     runs-on: ubuntu-latest
     steps:
-name: checkout code
+name: "checkout code"
         uses: actions/checkout@v2
 
-name: Update Prototype Kit
+name: "Update Prototype Kit"
         run: |
           git remote add upstream https://github.com/alphagov/govuk-prototype-kit.git
 git fetch upstream
