@@ -24,7 +24,8 @@ jobs:
               cd my-repo
               git remote add upstream ../upstream-repo
               git fetch upstream
-              git merge upstream/main
+              git merge upstream/main --no-commit --no ff
+              git reset README.md
               git config --global user.email "ben.raine92@gmail.com"
               git config --global user.name "benraine"
               git commit -m "Merged main from upstream"
