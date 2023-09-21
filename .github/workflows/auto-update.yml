@@ -1,17 +1,31 @@
-name: Auto Update Prototype Kit
+name: Merge Upstream
 on:
   schedule:
-cron: '0 0 * * *' # Set the schedule to run daily at midnight UTC
+    - cron:  '0 0 * * *'
 jobs:
-  update-prototype-kit:
+  merge:
     runs-on: ubuntu-latest
     steps:
-name: checkout code
-        uses: actions/checkout@v2
+        - name: Checkout
+          uses: actions/checkout@v2
+          with:
+            repository: 'dwp-ucd/prototype-kit-v13'
+            token: ${{ secrets.GITHUB_TOKEN }}
+            path: 'my-repo'
 
-name: Update Prototype Kit
-        run: |
-          git remote add upstream https://github.com/alphagov/govuk-prototype-kit.git
-git fetch upstream
-          git merge upstream/main --no-edit
-          git push
+        -  name: checkout upstream
+           uses: actions/checkout@v2
+           with:
+            repository: 'govuk-prototype-kit.git'
+            path: 'upstream-repo'
+
+            name: Merge main branch from Upstream into my Repo
+            run: |  
+              cd my-repo
+              git remote add upstream ../upstream-repo
+              git fetch upstream
+              git merge upstream/main
+              git config --global user.email "ben.raine92@gmail.com"
+              git config --global user.name "benraine"
+              git commit -m "Merged main from upstream"
+              git push
