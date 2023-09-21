@@ -1,8 +1,11 @@
 # GOV.UK Prototype Kit
 
-This is the latest version of the GOVUK Prototype Kit. You can use this repository as a template to create your own prototype.
+This is the latest version of the GOVUK Prototype Kit. An automated job runs every day at midnihgt to pull the latest version of the govuk protoype kit into this repository. You can use this repository as a template to create your own prototype. Make sure you delete the .github/workflows/auto-update.yml file from any prototypes you create from this template.
 
-Go to the [GOV.UK Prototype Kit site](https://prototype-kit.service.gov.uk/docs) to get the latest version and read the documentation.
+
+Once you have created your new prototype from this template, in your prototype make sure you delete the .github folder
+
+Go to the [GOV.UK Prototype Kit site](https://prototype-kit.service.gov.uk/docs) to get the latest documentation.
 
 ## About the Prototype Kit
 
