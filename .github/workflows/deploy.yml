@@ -1,9 +1,11 @@
-name: Deploy
+name: deploy
 
 on:
   push:
     branches:
       - master
+  # Add this line to enable manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
