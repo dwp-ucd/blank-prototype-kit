@@ -1,0 +1,17 @@
+name: Deploy to Heroku
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: akcigit/heroku-deploy@v1.0.5
+        with:
+          heroku_app_name: "blank-prototype1"
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_email: "ben.raine@engineering.digital.dwp.gov.uk"
+      - run: heroku container:push web -a ${{ env.HEROKU_APP_NAME }}
+      - run: heroku container:release web -a ${{ env.HEROKU_APP_NAME }}
