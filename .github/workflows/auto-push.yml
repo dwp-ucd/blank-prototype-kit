@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: akcigit/heroku-deploy@v1.0.5
+      - uses: heroku/actions/heroku-container-release@v1.0.0
         with:
           heroku_app_name: "blank-prototype1"
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
