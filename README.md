@@ -1,9 +1,7 @@
 # GOV.UK Prototype Kit
 
-This is the latest version of the GOVUK Prototype Kit. An automated job runs every day at midnihgt to pull the latest version of the govuk protoype kit into this repository. You can use this repository as a template to create your own prototype. Make sure you delete the .github/workflows/auto-update.yml file from any prototypes you create from this template.
+This is the latest version of the GOVUK Prototype Kit. An automated job runs every time a change is made to the main branch to push to Heroku. Make sure you edit the .github/workflows/deploy.yml file from any prototypes you create from this template. You need to edit line 16 in that file, replacing blank-prototype1 with the name of your Heroku app.
 
-
-Once you have created your new prototype from this template, in your prototype make sure you delete the .github folder
 
 Go to the [GOV.UK Prototype Kit site](https://prototype-kit.service.gov.uk/docs) to get the latest documentation.
 
