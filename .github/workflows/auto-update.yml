@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       # Add the upstream repository as a remote
       - run: git remote add upstream https://github.com/alphagov/govuk-prototype-kit.git
-      # Pull the latest changes from the main branch of the upstream repository
-      - run: git pull upstream main
+      # Pull the latest changes from the main branch of the upstream repository using the rebase option
+      - run: git pull --rebase upstream main
       # Push the changes to the origin repository
       - run: git push origin main
