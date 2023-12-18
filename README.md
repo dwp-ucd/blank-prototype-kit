@@ -1,7 +1,6 @@
 # GOV.UK Prototype Kit
 
-This is the latest version of the GOVUK Prototype Kit. An automated job runs every time a change is made to the main branch to push to Heroku. Make sure you edit the .github/workflows/deploy.yml file from any prototypes you create from this template. You need to edit line 16 in that file, replacing blank-prototype1 with the name of your Heroku app.
-
+This is version 13.16 of the GOVUK Prototype Kit. 
 
 Go to the [GOV.UK Prototype Kit site](https://prototype-kit.service.gov.uk/docs) to get the latest documentation.
 
@@ -17,16 +16,14 @@ If you publish your prototypes online, they **must** be [protected by a password
 
 You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
 
-## Installation instructions
-
-- [Installation guide for new users (non technical)](https://prototype-kit.service.gov.uk/docs/install/getting-started)
-- [Installation guide for developers (technical)](https://prototype-kit.service.gov.uk/docs/install/getting-started-advanced)
 
 ## Node version requirements
-
+This kit runs on version 20 of node. To find out the version you have and how to install version 20 you can use the guidance [https://prototype-kit.service.gov.uk/docs/install/node-mac]
 We always recommend you use the [current long term support (LTS) version of Node.js](https://github.com/nodejs/release#release-schedule).
 
 The Prototype Kit always supports at least the current and previous LTS releases.
+
+Once you have cloned the repository and have version 20 of node installed, you need to run: npm install in the prototype folder in terminal
 
 ## Support
 
